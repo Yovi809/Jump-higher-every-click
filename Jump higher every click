@@ -1,0 +1,64 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRayLibrary:Load("Satria Hub", "Default")
+
+local tab = DrRayLibrary.newTab("Main", "ImageIdHere")
+
+tab.newButton("auto farm (test)", "Prints Hello!", function()
+    _G.auto = true
+    
+    
+    while _G.auto do
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ClickRemote"):FireServer()
+wait(0.1)
+end
+end)
+
+tab.newButton("inf yield", "(testing)", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+tab.newButton("fly", "test!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+end)
+
+local tab = DrRayLibrary.newTab("egg", "ImageIdHere")
+
+tab.newButton("frost egg", "200m need!", function()
+    local args = {
+    [1] = "One",
+    [2] = workspace:WaitForChild("Eggs"):WaitForChild("IcyEgg"),
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("OpenEggEvent"):FireServer(unpack(args))
+end)
+
+tab.newButton("spawn egg", "100 need!", function()
+    local args = {
+    [1] = "One",
+    [2] = workspace:WaitForChild("Eggs"):WaitForChild("BasicEgg"),
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("OpenEggEvent"):FireServer(unpack(args))
+end)
+
+tab.newButton("jungle egg", "140m coin need!", function()
+    local args = {
+    [1] = "One",
+    [2] = workspace:WaitForChild("Eggs"):WaitForChild("JungleEgg"),
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("OpenEggEvent"):FireServer(unpack(args))
+end)
+
+tab.newButton("sky egg", "500 coin need!", function()
+    local args = {
+    [1] = "One",
+    [2] = workspace:WaitForChild("Eggs"):WaitForChild("SkyEgg"),
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("OpenEggEvent"):FireServer(unpack(args))
+end)
